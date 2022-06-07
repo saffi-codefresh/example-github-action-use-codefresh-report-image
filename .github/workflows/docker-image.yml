@@ -31,7 +31,7 @@ jobs:
           CF_HOST: "https://eti.pipeline-team.cf-cd.com"
           CF_VERBOSE: "1"
           CF_API_KEY: ${{ secrets.ETI_TOKEN }}
-          CF_CONTAINER_REGISTRY_INTEGRATION: "quay"
+          CF_CONTAINER_REGISTRY_INTEGRATION: "saffi"
           "CF_GITHUB_TOKEN": ${{ secrets.G_TOKEN }}
           "CF_GIT_PROVIDER": "github"
           "CF_GIT_REPO": "codefresh-io/example-github-action-use-csdp-report-image"
