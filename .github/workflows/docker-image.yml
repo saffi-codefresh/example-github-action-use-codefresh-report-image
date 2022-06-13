@@ -34,9 +34,9 @@ jobs:
 
           CF_HOST: "https://saffi.pipeline-team.cf-cd.com"
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
-          CF_DOCKERHUB_USERNAME: x${{ secrets.DOCKERHUB_USERNAME }}
+          CF_DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           CF_DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
-          "CF_JIRA_API_TOKEN": x${{ secrets.JIRA_TOKEN }}
+          "CF_JIRA_API_TOKEN": ${{ secrets.JIRA_TOKEN }}
           "CF_JIRA_HOST_URL": "https://codefresh-io.atlassian.net"
           "CF_JIRA_EMAIL": "saffi.hartal@codefresh.io"
           
@@ -44,7 +44,7 @@ jobs:
           "CF_GIT_PROVIDER": "github"
           "CF_GIT_REPO": "codefresh-io/example-github-action-use-csdp-report-image"
           "CF_GIT_BRANCH": "feature"
-          "CF_JIRA_MESSAGE": "wip CR-11027"
+          "CF_JIRA_MESSAGE": "wip C R-11027"
           "CF_JIRA_PROJECT_PREFIX": "CR"
         uses: codefresh-io/csdp-report-image@0.0.40
 
