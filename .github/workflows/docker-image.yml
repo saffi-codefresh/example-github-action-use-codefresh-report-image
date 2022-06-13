@@ -34,7 +34,7 @@ jobs:
 
           CF_HOST: "https://saffi.pipeline-team.cf-cd.com"
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
-          CF_DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          CF_DOCKERHUB_USERNAME: x${{ secrets.DOCKERHUB_USERNAME }}
           CF_DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
           "CF_JIRA_API_TOKEN": ${{ secrets.JIRA_TOKEN }}
           "CF_JIRA_HOST_URL": "https://codefresh-io.atlassian.net"
