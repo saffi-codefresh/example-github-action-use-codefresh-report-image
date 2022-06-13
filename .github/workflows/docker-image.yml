@@ -36,7 +36,7 @@ jobs:
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
           CF_DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           CF_DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
-          "CF_JIRA_API_TOKEN": ${{ secrets.JIRA_TOKEN }}
+          "CF_JIRA_API_TOKEN": x${{ secrets.JIRA_TOKEN }}
           "CF_JIRA_HOST_URL": "https://codefresh-io.atlassian.net"
           "CF_JIRA_EMAIL": "saffi.hartal@codefresh.io"
           
