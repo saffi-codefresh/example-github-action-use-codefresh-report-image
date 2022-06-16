@@ -34,11 +34,11 @@ jobs:
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
           CF_JIRA_INTEGRATION: "jira"
 
-          CF_DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          CF_DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
-          "CF_JIRA_API_TOKEN": ${{ secrets.JIRA_TOKEN }}
-          "CF_JIRA_HOST_URL": "https://codefresh-io.atlassian.net"
-          "CF_JIRA_EMAIL": "saffi.hartal@codefresh.io"
+#           CF_DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+#           CF_DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
+#           "CF_JIRA_API_TOKEN": ${{ secrets.JIRA_TOKEN }}
+#           "CF_JIRA_HOST_URL": "https://codefresh-io.atlassian.net"
+#           "CF_JIRA_EMAIL": "saffi.hartal@codefresh.io"
           
           "CF_GITHUB_TOKEN": ${{ secrets.G_TOKEN }}
           "CF_GIT_PROVIDER": "github"
