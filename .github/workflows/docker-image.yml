@@ -27,13 +27,13 @@ jobs:
         with:
           CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/csdp-report-image-github-action:example-reported-image
           CF_ENRICHERS: "jira, git"
-          #CF_HOST: "https://eti.pipeline-team.cf-cd.com"
-          #CF_API_KEY: ${{ secrets.ETI_TOKEN }}
-          #CF_CONTAINER_REGISTRY_INTEGRATION: "saffi"
-          #CF_JIRA_INTEGRATION: "jira"
 
           CF_HOST: "https://saffi.pipeline-team.cf-cd.com"
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
+          
+          CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
+          CF_JIRA_INTEGRATION: "jira"
+
           CF_DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           CF_DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
           "CF_JIRA_API_TOKEN": ${{ secrets.JIRA_TOKEN }}
