@@ -28,7 +28,8 @@ jobs:
           CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/csdp-report-image-github-action:example-reported-image
           CF_ENRICHERS: "jira, git"
 
-          CF_HOST: "https://saffi.pipeline-team.cf-cd.com"
+          CF_HOST: "https://mr-5e7cd09a58b4208772afdbfd-2e575f1.cf-op.com"
+          # "https://saffi.pipeline-team.cf-cd.com"
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
 
 #         using integrations - registry integration named docker
