@@ -30,12 +30,12 @@ jobs:
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
 
           CF_IMAGE: ${{ secrets.DOCKERQUAY_USERNAME }}/csdp-report-image-github-action:example-reported-image
-#         using integrations - registry integration named docker
+#         using integration
           CF_CONTAINER_REGISTRY_INTEGRATION: "etiquay"
 
           CF_ENRICHERS: "jira, git"
           
-#         using integrations - jira integration named jira
+#         using integration
           CF_JIRA_INTEGRATION: "eti"
           CF_JIRA_MESSAGE: "wip CR-11027"
           CF_JIRA_PROJECT_PREFIX: "CR"
