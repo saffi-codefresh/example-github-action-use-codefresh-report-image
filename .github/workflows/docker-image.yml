@@ -32,6 +32,7 @@ jobs:
           # CF_HOST: "https://saffi.pipeline-team.cf-cd.com"
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
 
+
 #         using integrations - registry integration named docker
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
 #         using integrations - jira integration named jira
