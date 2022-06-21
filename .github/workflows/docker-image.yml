@@ -44,7 +44,7 @@ jobs:
 #           example of explicit jira credentials when CF_JIRA_INTEGRATION is not in use
 #           CF_JIRA_API_TOKEN: ${{ secrets.JIRA_TOKEN }}
 #           CF_JIRA_HOST_URL: "https://codefresh-io.atlassian.net"
-#           CF_JIRA_EMAIL: "saffi.hartal@codefresh.io"
+#           CF_JIRA_EMAIL: "saffi.hartal@codefresh.io" h
           
           "CF_GITHUB_TOKEN": ${{ secrets.G_TOKEN }}
           "CF_GIT_PROVIDER": "github"
