@@ -28,7 +28,7 @@ jobs:
           CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/csdp-report-image-github-action:example-reported-image
           CF_ENRICHERS: "jira, git"
           # Specify cluster app-proxy
-          CF_HOST: "https://eti-demo.pipeline-team.cf-cd.com"
+          CF_HOST: "https://saffi.pipeline-team.cf-cd.com"
           CF_API_KEY: ${{ secrets.USER_TOKEN }}
           
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
