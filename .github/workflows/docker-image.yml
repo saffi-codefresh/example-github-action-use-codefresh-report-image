@@ -30,15 +30,15 @@ jobs:
           # Specify cluster app-proxy
           CF_HOST: "https://eti-demo.pipeline-team.cf-cd.com"
           CF_VERBOSE: "1"
-          CF_API_KEY: ${{ secrets.ETI_TOKEN }}
+          CF_API_KEY: ${{ secrets.USER_TOKEN }}
           CF_CONTAINER_REGISTRY_INTEGRATION: "quay"
-          "CF_GITHUB_TOKEN": ${{ secrets.G_TOKEN }}
-          "CF_GIT_PROVIDER": "github"
-          "CF_GIT_REPO": "codefresh-io/example-github-action-use-csdp-report-image"
-          "CF_GIT_BRANCH": "feature"
-          "CF_JIRA_INTEGRATION": "jira"
-          "CF_JIRA_MESSAGE": "wip CR-11027"
-          "CF_JIRA_PROJECT_PREFIX": "CR"
+          CF_GITHUB_TOKEN": ${{ secrets.G_TOKEN }}
+          CF_GIT_PROVIDER: "github"
+          CF_GIT_REPO: "codefresh-io/example-github-action-use-csdp-report-image"
+          CF_GIT_BRANCH: "feature"
+          CF_JIRA_INTEGRATION: "jira"
+          CF_JIRA_MESSAGE: "wip CR-11027"
+          CF_JIRA_PROJECT_PREFIX: "CR"
         uses: codefresh-io/csdp-report-image@0.0.40
 
 
