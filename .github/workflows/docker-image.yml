@@ -33,7 +33,7 @@ jobs:
           
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
           
-          CF_GITHUB_TOKEN": ${{ secrets.G_TOKEN }}
+          CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
           CF_GIT_PROVIDER: "github"
           CF_GIT_REPO: "codefresh-io/example-github-action-use-csdp-report-image"
           CF_GIT_BRANCH: "feature"
