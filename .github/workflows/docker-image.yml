@@ -42,5 +42,6 @@ jobs:
           CF_JIRA_PROJECT_PREFIX: "CR"
         uses: codefresh-io/codefresh-report-image@0.0.56
         
+        
 
 
