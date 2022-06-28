@@ -26,7 +26,7 @@ jobs:
       - name: report image by action
         with:
           # Specify cluster app-proxy
-          CF_HOST: "https://saffi.pipeline-team.cf-cd.com"
+          CF_HOST: "${{ secrets.CF_RUNTIME_HOST }}"
           CF_API_KEY: ${{ secrets.USER_TOKEN }}
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
 
