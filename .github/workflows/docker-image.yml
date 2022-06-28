@@ -40,6 +40,6 @@ jobs:
           CF_JIRA_INTEGRATION: "jira"
           CF_JIRA_MESSAGE: "wip CR-11027"
           CF_JIRA_PROJECT_PREFIX: "CR"
-        uses: codefresh-io/csdp-report-image@0.0.53
+        uses: codefresh-io/csdp-report-image@0.0.54
 
 
