@@ -36,9 +36,9 @@ jobs:
 #           CF_ENRICHERS: "jira, git"
           
 #         using integration
-          CF_JIRA_INTEGRATION: "eti"
-          CF_JIRA_MESSAGE: "wip CR-11027"
-          CF_JIRA_PROJECT_PREFIX: "CR"
+#           CF_JIRA_INTEGRATION: "eti"
+#           CF_JIRA_MESSAGE: "wip CR-11027"
+#           CF_JIRA_PROJECT_PREFIX: "CR"
           
           CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
           CF_GIT_PROVIDER: "github"
@@ -50,6 +50,6 @@ jobs:
           CF_REGISTRY_USERNAME: ${{ secrets.DOCKERQUAY_USERNAME }}
           CF_REGISTRY_PASSWORD: ${{ secrets.DOCKERQUAY_TOKEN }}
           CF_REGISTRY_DOMAIN: "quay.io"
-        uses: codefresh-io/csdp-report-image@0.0.46
+        uses: codefresh-io/csdp-report-image@Marketplace
 
         
