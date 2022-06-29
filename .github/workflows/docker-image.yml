@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build & push the Docker image
-        eenv:
+        env:
           CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action
         run: |
           docker build . --file Dockerfile --tag $CF_IMAGE && docker push $CF_IMAGE
