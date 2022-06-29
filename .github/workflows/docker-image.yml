@@ -30,8 +30,8 @@ jobs:
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
 
           CF_IMAGE: ${{ secrets.DOCKERQUAY_USERNAME }}/csdp-report-image-github-action:example-reported-image
-# #         using integration
-#           CF_CONTAINER_REGISTRY_INTEGRATION: "etiquay"
+#         using integration
+          CF_CONTAINER_REGISTRY_INTEGRATION: "eti-new-quay"
 
 #           CF_ENRICHERS: "jira, git"
           
@@ -47,9 +47,9 @@ jobs:
           
           
           #           example of explicit docker hub credentials for cases that CF_CONTAINER_REGISTRY_INTEGRATION is not in use
-          CF_REGISTRY_USERNAME: ${{ secrets.DOCKERQUAY_USERNAME }}
-          CF_REGISTRY_PASSWORD: ${{ secrets.DOCKERQUAY_TOKEN }}
-          CF_REGISTRY_DOMAIN: "quay.io"
+#           CF_REGISTRY_USERNAME: ${{ secrets.DOCKERQUAY_USERNAME }}
+#           CF_REGISTRY_PASSWORD: ${{ secrets.DOCKERQUAY_TOKEN }}
+#           CF_REGISTRY_DOMAIN: "quay.io"
         uses: codefresh-io/csdp-report-image@Marketplace
 
         
