@@ -19,15 +19,19 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build & push the Docker image
-        env:
-          CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/codefresh-report-image-github-action:example-reported-image
+        eenv:
+          CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action
         run: |
           docker build . --file Dockerfile --tag $CF_IMAGE && docker push $CF_IMAGE
+          echo "Image should be accessible to your local machine (after docker login) by:"
+          echo "docker pull $CF_IMAGE"
+          docker pull $CF_IMAGE
       - name: report image by action
         with:
           # Specify cluster app-proxy
           CF_HOST: "${{ secrets.CF_RUNTIME_HOST }}"
           CF_API_KEY: ${{ secrets.USER_TOKEN }}
+          # use image registry integration - the name of the integration used for pulling information on the image.
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
 
           # report image 
@@ -36,9 +40,10 @@ jobs:
           CF_ENRICHERS: "jira, git"
           # use githug token
           CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}    
-          # use jira integration
-          CF_JIRA_INTEGRATION: "jira"
-          CF_JIRA_MESSAGE: "wip CR-11027"
+          # use jira integration - jira is the name of the integration created in codefresh argo platform.
+          CF_JIRA_INTEGRATION: "jira" 
+          CF_JIRA_MESSAGE: "A message with embedded issue ( i.e. CR-11027 ) that would be use query jira for the ticket "
+          # a specified prefix for finding the jira issue 
           CF_JIRA_PROJECT_PREFIX: "CR"
         uses: codefresh-io/codefresh-report-image@0.0.60
         
