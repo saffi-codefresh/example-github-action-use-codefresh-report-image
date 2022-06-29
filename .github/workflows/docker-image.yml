@@ -39,7 +39,7 @@ jobs:
           # integration with
           CF_ENRICHERS: "jira, git"
           # use githug token
-          CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}    
+          CF_GITHUB_TOKEN: ${{ secrets.CF_GITHUB_TOKEN }}    
           # use jira integration - jira is the name of the integration created in codefresh argo platform.
           CF_JIRA_INTEGRATION: "jira" 
           CF_JIRA_MESSAGE: "A message with embedded issue ( i.e. CR-11027 ) that would be use query jira for the ticket "
