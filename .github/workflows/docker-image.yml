@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.DOCKERQUAY_TOKEN }}
       - name: Build & push the Docker image
         env:
-          CF_IMAGE: quay.io/${{ secrets.DOCKERQUAY_USERNAME }}/csdp-report-image-github-action:example-reported-image
+          CF_IMAGE: quay.io/${{ secrets.DOCKERQUAY_USERNAME }}/csdp-report-image-github-action:1.5.5
         run: |
           docker build . --file Dockerfile --tag $CF_IMAGE && docker push $CF_IMAGE
       - name: report image by action
@@ -29,16 +29,16 @@ jobs:
           CF_HOST: "https://mr-60c7443e37ca2730b9757992-d090527.cf-op.com"
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
 
-          CF_IMAGE: ${{ secrets.DOCKERQUAY_USERNAME }}/csdp-report-image-github-action:example-reported-image
+          CF_IMAGE: ${{ secrets.DOCKERQUAY_USERNAME }}/csdp-report-image-github-action:1.5.5
 #         using integration
           CF_CONTAINER_REGISTRY_INTEGRATION: "eti-new-quay"
 
 #           CF_ENRICHERS: "jira, git"
           
 #         using integration
-#           CF_JIRA_INTEGRATION: "eti"
-#           CF_JIRA_MESSAGE: "wip CR-11027"
-#           CF_JIRA_PROJECT_PREFIX: "CR"
+          CF_JIRA_INTEGRATION: "eti-jira"
+          CF_JIRA_MESSAGE: "CR-11028"
+          CF_JIRA_PROJECT_PREFIX: "CR"
           
           CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
           CF_GIT_PROVIDER: "github"
