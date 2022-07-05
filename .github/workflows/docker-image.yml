@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build & push the Docker image
         env:
-          CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action-1:1
+          CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action:0.0.1
         run: |
           docker build . --file Dockerfile --tag $CF_IMAGE && docker push $CF_IMAGE
           echo "Image should be accessible to your local machine (after docker login) by:"
@@ -36,7 +36,7 @@ jobs:
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
 
           # report image 
-          CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action-1:1
+          CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action:0.0.1
           # integration with
           CF_ENRICHERS: "jira, git"
           # use githug token
