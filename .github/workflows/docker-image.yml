@@ -31,7 +31,7 @@ jobs:
         with:
           # Specify cluster app-proxy
           CF_HOST: "${{ secrets.CF_RUNTIME_HOST }}"
-          CF_API_KEY: ${{ secrets.USER_TOKEN }}
+          CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
           # use image registry integration - the name of the integration used for pulling information on the image.
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
 
