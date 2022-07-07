@@ -48,4 +48,4 @@ jobs:
               cket "
           # a specified prefix for finding the jira issue 
           CF_JIRA_PROJECT_PREFIX: "CR"
-        uses: saffi-codefresh/codefresh-report-image@a0.0.4
+        uses: saffi-codefresh/codefresh-report-image@a0.0.5
