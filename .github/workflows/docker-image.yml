@@ -16,7 +16,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          registry: quay.io
+          registry: codefreshtest.jfrog.io
           username: ${{ secrets.JFROG_USER_NAME }}
           password: ${{ secrets.JFROG_PASSWORD }}
       - name: Build & push the Docker image
