@@ -32,6 +32,7 @@ jobs:
           CF_IMAGE:  codefreshtest.jfrog.io/test-jfrog-docker-local/eti:10.0.1
 #         using integration
 #           CF_CONTAINER_REGISTRY_INTEGRATION: "eti-new-quay"
+          CF_CONTAINER_REGISTRY_INTEGRATION: "jfrog"
 
 #           CF_ENRICHERS: "jira, git"
           
@@ -52,9 +53,9 @@ jobs:
 #           CF_REGISTRY_DOMAIN: "quay.io"
 
           #           example of explicit docker hub credentials for cases that CF_CONTAINER_REGISTRY_INTEGRATION is not in use
-          CF_REGISTRY_USERNAME: ${{ secrets.JFROG_USER_NAME }}
-          CF_REGISTRY_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
-          CF_REGISTRY_DOMAIN: "codefreshtest.jfrog.io"
+#           CF_REGISTRY_USERNAME: ${{ secrets.JFROG_USER_NAME }}
+#           CF_REGISTRY_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
+#           CF_REGISTRY_DOMAIN: "codefreshtest.jfrog.io"
 
 
         uses: codefresh-io/csdp-report-image@Marketplace
