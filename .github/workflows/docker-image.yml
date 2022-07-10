@@ -26,30 +26,37 @@ jobs:
           docker build . --file Dockerfile --tag $CF_IMAGE && docker push $CF_IMAGE
       - name: report image by action
         with:
-          CF_HOST: "https://mr-60c7443e37ca2730b9757992-d090527.cf-op.com"
+          CF_HOST: "http://eti.pipeline-team.cf-cd.com"
           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
 
           CF_IMAGE:  quay.io/${{ secrets.DOCKERQUAY_USERNAME }}/denis:10.0.0
 #         using integration
-          CF_CONTAINER_REGISTRY_INTEGRATION: "eti-new-quay"
+#           CF_CONTAINER_REGISTRY_INTEGRATION: "eti-new-quay"
 
 #           CF_ENRICHERS: "jira, git"
           
 #         using integration
-          CF_JIRA_INTEGRATION: "eti-jira"
-          CF_JIRA_MESSAGE: "CR-11028"
-          CF_JIRA_PROJECT_PREFIX: "CR"
+#           CF_JIRA_INTEGRATION: "eti-jira"
+#           CF_JIRA_MESSAGE: "CR-11028"
+#           CF_JIRA_PROJECT_PREFIX: "CR"
           
-          CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
-          CF_GIT_PROVIDER: "github"
-          CF_GIT_REPO: "codefresh-io/example-github-action-use-csdp-report-image"
-          CF_GIT_BRANCH: "feature"
+#           CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
+#           CF_GIT_PROVIDER: "github"
+#           CF_GIT_REPO: "codefresh-io/example-github-action-use-csdp-report-image"
+#           CF_GIT_BRANCH: "feature"
           
           
           #           example of explicit docker hub credentials for cases that CF_CONTAINER_REGISTRY_INTEGRATION is not in use
 #           CF_REGISTRY_USERNAME: ${{ secrets.DOCKERQUAY_USERNAME }}
 #           CF_REGISTRY_PASSWORD: ${{ secrets.DOCKERQUAY_TOKEN }}
 #           CF_REGISTRY_DOMAIN: "quay.io"
+
+          #           example of explicit docker hub credentials for cases that CF_CONTAINER_REGISTRY_INTEGRATION is not in use
+          CF_REGISTRY_USERNAME: ${{ secrets.JFROG_USER_NAME }}
+          CF_REGISTRY_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
+          CF_REGISTRY_DOMAIN: "codefreshtest.jfrog.io"
+
+
         uses: codefresh-io/csdp-report-image@Marketplace
 
         
