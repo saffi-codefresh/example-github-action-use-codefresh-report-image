@@ -27,6 +27,7 @@ jobs:
           echo "docker pull $CF_IMAGE"
           docker pull $CF_IMAGE
           echo "On the next step, the report image would use the integration to pull information on the reported image, and using the specified enrichers."
+          echo " HOST ${{ secrets.LOCAL_HOST }}"
       - name: report image by action
         with:
           # Specify cluster app-proxy
