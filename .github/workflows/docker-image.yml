@@ -31,7 +31,7 @@ jobs:
         with:
           # Specify cluster app-proxy
           #CF_HOST: "${{ secrets.CF_HOST }}"
-          CF_HOST: "${{ secrets.LOCAL_HOST }}"
+          CF_HOST: "https://saffi.pipeline-team.cf-cd.com"
           
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           # use image registry integration - the name of the integration used for pulling information on the image.
