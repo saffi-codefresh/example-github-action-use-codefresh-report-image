@@ -58,6 +58,6 @@ jobs:
 #           CF_REGISTRY_DOMAIN: "codefreshtest.jfrog.io"
 
 
-        uses: codefresh-io/csdp-report-image@Marketplace
+        uses: codefresh-io/codefresh-report-image@0.0.82
 
         
