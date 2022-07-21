@@ -41,7 +41,7 @@ jobs:
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
 
           # report image 
-          CF_IMAGE: ${{ ${{ env.CF_IMAGE }}
+          CF_IMAGE: ${{ env.CF_IMAGE }}
           # integration with
           CF_ENRICHERS: "jira, git"
           # use githug token
