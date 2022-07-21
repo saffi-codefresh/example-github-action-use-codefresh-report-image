@@ -28,7 +28,8 @@ jobs:
           docker pull $CF_IMAGE
           echo "On the next step, the report image would use the integration to pull information on the reported image, and using the specified enrichers."
           echo " HOST ${{ secrets.LOCAL_HOST }}"
-          echo "CF_JIRA_MESSAGE=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
+          CF_JIRA_MESSAGE="Example for inserting branch name: $(echo ${GITHUB_REF##*/}) like CR-11027-fix-report "
+          echo "CF_JIRA_MESSAGE=$CF_JIRA_MESSAGE" >> $GITHUB_ENV
       - name: report image by action
         env:
           CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action:202207211619
