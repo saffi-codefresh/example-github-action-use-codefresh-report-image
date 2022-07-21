@@ -21,7 +21,6 @@ jobs:
       - name: Build & push the Docker image
         env:
           CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action:202207211619
-          TAG: 202207211619
         run: |
           docker build . --file Dockerfile --tag $CF_IMAGE && docker push $CF_IMAGE
           echo "Image should be accessible to your local machine (after docker login) by:"
@@ -30,6 +29,8 @@ jobs:
           echo "On the next step, the report image would use the integration to pull information on the reported image, and using the specified enrichers."
           echo " HOST ${{ secrets.LOCAL_HOST }}"
       - name: report image by action
+        env:
+          CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action:202207211619
         with:
           # Specify cluster app-proxy
           #CF_HOST: "${{ secrets.CF_HOST }}"
@@ -41,7 +42,7 @@ jobs:
           CF_CONTAINER_REGISTRY_INTEGRATION: "docker"
 
           # report image 
-          CF_IMAGE: ${{ env.CF_IMAGE }}
+          CF_IMAGE: "${{ env.CF_IMAGE }}"
           # integration with
           CF_ENRICHERS: "jira, git"
           # use githug token
