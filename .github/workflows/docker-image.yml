@@ -31,7 +31,7 @@ jobs:
       - name: report image by action
         env:
           CF_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/report-image-github-action:202207211619
-          BR_NAME: ${{ env.GITHUB_REF##*/ }}
+          BR_NAME: ${{ env.GITHUB_REF }}
         with:
           # Specify cluster app-proxy
           #CF_HOST: "${{ secrets.CF_HOST }}"
