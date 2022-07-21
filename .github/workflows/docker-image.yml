@@ -53,4 +53,4 @@ jobs:
           # a specified prefix for finding the jira issue 
           CF_JIRA_PROJECT_PREFIX: "CR"
 #         uses: saffi-codefresh/codefresh-report-image@b0.0.3
-        uses: codefresh-io/codefresh-report-image@latest
+        uses: codefresh-io/codefresh-report-image@0.0.152
