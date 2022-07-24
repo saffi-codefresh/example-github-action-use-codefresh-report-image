@@ -45,7 +45,7 @@ jobs:
           # The Jira message for the `CF_JIRA_PROJECT_PREFIX` to add to the image.
           CF_JIRA_MESSAGE: "CR-11028"
 
-        uses: codefresh-io/codefresh-report-image@latest
+        uses: codefresh-io/codefresh-report-image@0.0.83
 #       - name: report image by action
 #         with:
 #           CF_HOST: "http://eti.pipeline-team.cf-cd.com"
