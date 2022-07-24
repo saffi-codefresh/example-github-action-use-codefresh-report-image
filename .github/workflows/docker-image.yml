@@ -31,7 +31,7 @@ jobs:
       - name: report image
         with:
           # The URL to the cluster with the Codefresh runtime to integrate with.
-          CF_HOST: http://localhost:3017
+          CF_HOST: http://eti.pipeline-team.cf-cd.com
           # The key to authenticate the GitHub Actions user to Codefresh.
           CF_API_KEY: 62dd598823b80523dab53875.04962b265492a37bb2487633cfaf1878 # Committing a plain text token is a security risk. We highly recommend using an encrypted secrets. Documentation- https://docs.github.com/en/actions/security-guides/encrypted-secrets
           # The name of the image to report to Codefresh.
