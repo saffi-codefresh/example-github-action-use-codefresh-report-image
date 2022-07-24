@@ -44,6 +44,8 @@ jobs:
           CF_JIRA_PROJECT_PREFIX: "CR"
           # The Jira message for the `CF_JIRA_PROJECT_PREFIX` to add to the image.
           CF_JIRA_MESSAGE: "CR-11028"
+          
+          CF_CONTAINER_REGISTRY_INTEGRATION: "eti-new-quay"
 
         uses: codefresh-io/codefresh-report-image@latest
 #       - name: report image by action
