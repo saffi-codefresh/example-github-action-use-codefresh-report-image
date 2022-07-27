@@ -30,7 +30,7 @@ jobs:
       - name: report image
         with:
           # Name of runtime to implement the enrichment
-#           CF_HOST: 'https://mr-60c7443e37ca2730b9757992-e4c9118.cf-cd.com'
+          CF_HOST: 'https://mr-60c7443e37ca2730b9757992-e4c9118.cf-cd.com'
 
 #           CF_RUNTIME_NAME: 'eti'
           # Codefresh API key !! Committing a plain text token is a security risk. We highly recommend using an encrypted secrets. !!
@@ -38,7 +38,7 @@ jobs:
           CF_API_KEY: '62dfffaf535bf608bd83cec2.2e6d481c04676ce15c0ec0df43bc5744'
 
           # Name of Container registry integration
-          CF_CONTAINER_REGISTRY_INTEGRATION: 'test-hosted2'
+          CF_CONTAINER_REGISTRY_INTEGRATION: 'hosted-quay-new'
 
           # Name of Jira integration
           CF_JIRA_INTEGRATION: 'eti-jira'
@@ -56,8 +56,8 @@ jobs:
           # String starting with the issue ID to associate with image
           CF_JIRA_MESSAGE: "CR-11028"
 
-
-        uses: eti-codefresh/codefresh-report-image@test3
+        uses: codefresh-io/codefresh-report-image@latest
+#         uses: eti-codefresh/codefresh-report-image@test3
           
       
 #       - name: report image
