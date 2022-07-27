@@ -27,7 +27,6 @@ jobs:
           
           
           
-          
       - name: report image
         with:
           # Name of runtime to implement the enrichment
