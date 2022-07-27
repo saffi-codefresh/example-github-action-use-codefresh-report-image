@@ -56,8 +56,8 @@ jobs:
           # String starting with the issue ID to associate with image
           CF_JIRA_MESSAGE: "CR-11028"
 
-        uses: codefresh-io/codefresh-report-image@latest
-#         uses: eti-codefresh/codefresh-report-image@test3
+#         uses: codefresh-io/codefresh-report-image@latest
+        uses: eti-codefresh/codefresh-report-image@test3
           
       
 #       - name: report image
