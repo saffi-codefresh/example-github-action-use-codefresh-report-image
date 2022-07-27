@@ -57,7 +57,7 @@ jobs:
           CF_JIRA_MESSAGE: "CR-11028"
 
 
-        uses: eti-codefresh/codefresh-report-image@test2
+        uses: eti-codefresh/codefresh-report-image@test3
           
       
 #       - name: report image
