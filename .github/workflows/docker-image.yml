@@ -40,7 +40,7 @@ jobs:
           CF_CONTAINER_REGISTRY_INTEGRATION: 'hosted-quay-new'
 
           # Name of Jira integration
-          CF_JIRA_INTEGRATION: 'eti-jira'
+          CF_JIRA_INTEGRATION: 'eti-jira-new'
 
           # Image path to enrich
           CF_IMAGE: 'quay.io/${{ secrets.DOCKERQUAY_USERNAME }}/denis:10.0.0'
