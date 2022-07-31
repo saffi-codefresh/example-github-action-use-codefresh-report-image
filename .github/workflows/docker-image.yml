@@ -58,59 +58,5 @@ jobs:
 #         uses: codefresh-io/codefresh-report-image@latest
         uses: eti-codefresh/codefresh-report-image@test4
           
-      
-#       - name: report image
-#         with:
-#           # The URL to the cluster with the Codefresh runtime to integrate with.
-#           CF_HOST: http://eti.pipeline-team.cf-cd.com
-#           # The key to authenticate the GitHub Actions user to Codefresh.
-#           CF_API_KEY: 62dd8538587759bc3dc50a63.d1797f37b368372573401d8019 # Committing a plain text token is a security risk. We highly recommend using an encrypted secrets. Documentation- https://docs.github.com/en/actions/security-guides/encrypted-secrets
-#           # The name of the image to report to Codefresh.
-#           CF_IMAGE: quay.io/${{ secrets.DOCKERQUAY_USERNAME }}/denis:10.0.0
-#           # The token for Git integration.
-#           CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
-          
-#           CF_JIRA_INTEGRATION: "eti-jira"
-#           # The Jira project prefix that identifies the ticket number for which to retrieve information.
-#           CF_JIRA_PROJECT_PREFIX: "CR"
-#           # The Jira message for the `CF_JIRA_PROJECT_PREFIX` to add to the image.
-#           CF_JIRA_MESSAGE: "CR-11028"
-          
-#           CF_CONTAINER_REGISTRY_INTEGRATION: "etiquay2"
 
-#         uses: codefresh-io/codefresh-report-image@latest
-#       - name: report image by action
-#         with:
-#           CF_HOST: "http://eti.pipeline-team.cf-cd.com"
-#           CF_API_KEY: ${{ secrets.SAFFI_TOKEN }}
-
-#           CF_IMAGE:  codefreshtest.jfrog.io/test-jfrog-docker-local/eti:10.0.2
-# #         using integration
-# #           CF_CONTAINER_REGISTRY_INTEGRATION: "eti-new-quay"
-#           CF_CONTAINER_REGISTRY_INTEGRATION: "jfrog"
-
-# #           CF_ENRICHERS: "jira, git"
-          
-# #         using integration
-# #           CF_JIRA_INTEGRATION: "eti-jira"
-# #           CF_JIRA_MESSAGE: "CR-11028"
-# #           CF_JIRA_PROJECT_PREFIX: "CR"
-          
-# #           CF_GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
-# #           CF_GIT_PROVIDER: "github"
-# #           CF_GIT_REPO: "codefresh-io/example-github-action-use-csdp-report-image"
-# #           CF_GIT_BRANCH: "feature"
-          
-          
-#           #           example of explicit docker hub credentials for cases that CF_CONTAINER_REGISTRY_INTEGRATION is not in use
-# #           CF_REGISTRY_USERNAME: ${{ secrets.DOCKERQUAY_USERNAME }}
-# #           CF_REGISTRY_PASSWORD: ${{ secrets.DOCKERQUAY_TOKEN }}
-# #           CF_REGISTRY_DOMAIN: "quay.io"
-
-#           #           example of explicit docker hub credentials for cases that CF_CONTAINER_REGISTRY_INTEGRATION is not in use
-# #           CF_REGISTRY_USERNAME: ${{ secrets.JFROG_USER_NAME }}
-# #           CF_REGISTRY_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
-# #           CF_REGISTRY_DOMAIN: "codefreshtest.jfrog.io"
-
-#         uses: codefresh-io/codefresh-report-image@0.0.83
         
