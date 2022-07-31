@@ -58,7 +58,7 @@ jobs:
           CF_WORKFLOW_NAME: "test"
 
 #         uses: codefresh-io/codefresh-report-image@latest
-        uses: eti-codefresh/codefresh-report-image@test4
+        uses: eti-codefresh/codefresh-report-image@test5
           
 
 
