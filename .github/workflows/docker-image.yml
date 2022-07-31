@@ -26,7 +26,6 @@ jobs:
           docker build . --file Dockerfile --tag $CF_IMAGE && docker push $CF_IMAGE
           
           
-          
       - name: report image
         with:
           # Name of runtime to implement the enrichment
